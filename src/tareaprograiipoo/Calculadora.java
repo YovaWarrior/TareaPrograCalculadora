@@ -5,8 +5,8 @@ public class Calculadora {
     public String tipoCalculadora;
     public String color;
     public int dimensionPantalla;
-    private String numeroDeSerie;
-    private String nombrePropietario;
+    protected String numeroDeSerie;
+    protected String nombrePropietario;
 
     //Constructor de la clase
     public Calculadora(String propietario){

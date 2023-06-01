@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package tareaprograiipoo;
 
 import java.util.Scanner;
 
 public class TareaPrograIIPOO {
-    
     private static final String Verde = "\u001B[32m";
     private static final String Amarillo = "\u001B[33m";
     private static final String Azul = "\u001B[34m";
@@ -16,15 +11,17 @@ public class TareaPrograIIPOO {
     private static final String Magenta = "\u001B[35m";
     private static final String Cyan = "\u001B[36m";
     
+   
     public static void main(String[] args) {
        Scanner sn = new Scanner(System.in);
-       Calculadora calculadora = new Calculadora("JP");
-       CalculadoraEspecial calculadora2 = new CalculadoraEspecial("CM");
+      CalculadoraEspecial calculadora2 = new CalculadoraEspecial("Carlos Martínez");
        boolean salir = false;
        int opcion; 
+       
+       calculadora2.mostrarDatos();
 
        do{
-           System.out.println("");
+          System.out.println("");
            System.out.println("=======================");
            System.out.println(Verde+"1. Sumar");
            System.out.println(Amarillo+"2. Restar");
@@ -43,23 +40,23 @@ public class TareaPrograIIPOO {
            System.out.println("=======================");
            opcion = sn.nextInt();
             switch(opcion){
-                case 1:
-                   System.out.println("El resultado de la suma es = " + calculadora.sumar(10, 5));
+               case 1:
+                   System.out.println("El resultado de la suma es = " + calculadora2.sumar(10, 5));
                    break;
                 case 2:
-                   System.out.println("El resultado de la resta es = " +calculadora.restar(10, 5));
+                   System.out.println("El resultado de la resta es = " +calculadora2.restar(10, 5));
                    break;
                 case 3:
-                   System.out.println("El resultado de la multiplicacion es = " +calculadora.multiplicar(10, 5));
+                   System.out.println("El resultado de la multiplicacion es = " +calculadora2.multiplicar(10, 5));
                    break;
                 case 4:
-                    System.out.println("El resultado de la division es = " +calculadora.dividir(10, 5));
+                    System.out.println("El resultado de la division es = " +calculadora2.dividir(10, 5));
                     break;
                 case 5:
-                    System.out.println("El resultado de la raiz cuadrada es = " +calculadora.raizCuadrada(16));
+                    System.out.println("El resultado de la raiz cuadrada es = " +calculadora2.raizCuadrada(16));
                     break;
                 case 6:
-                    System.out.println("Es primo? = " +calculadora.esPrimo(11));
+                    System.out.println("Es primo? = " +calculadora2.esPrimo(11));
                     break;
                 case 7:
                     System.out.println("El resultado del factorial es = " +calculadora2.Factorial(4));

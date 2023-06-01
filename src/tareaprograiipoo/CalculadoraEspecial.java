@@ -1,27 +1,24 @@
 
 package tareaprograiipoo;
 
-public class CalculadoraEspecial {
-    //Atributos de Clase, pueden ser Publicos, Privados y Protegidos (en herencia)
-    public String tipoCalculadora;
-    public String color;
-    public int dimensionPantalla;
-    private String numeroDeSerie;
-    private String nombrePropietario;
-
-    //Constructor de la clase
-    public CalculadoraEspecial(String propietario){
-        this.tipoCalculadora="Calculadora Especial";
-        this.dimensionPantalla=10;
-        this.numeroDeSerie="12345abc";
-        this.color="Rojo";
-        this.nombrePropietario=propietario;
-    }
-
-    //Constructor vacio
-    public CalculadoraEspecial(){
+public class CalculadoraEspecial extends Calculadora {
+    public String marcaCalculadora;
+    public int añoCalculadora;
+    
+    
+    public CalculadoraEspecial(String CarlosMartínez){
+        super(CarlosMartínez);
+        this.tipoCalculadora = "Calculadora Científica";
+        this.color = "Rojo";
+        this.dimensionPantalla = 20;
+        this.numeroDeSerie = "12312sdfg";
+        this.marcaCalculadora = "CASIO";
+        this.añoCalculadora = 2023;
     }
     
+    public void mostrarDatos (){
+        System.out.println("Tipo de Calculadora: "+tipoCalculadora+"\nColor de Calculadora: "+color+"\nDimension de Pantalla: "+dimensionPantalla+"\nNumero de Serie: "+numeroDeSerie+"\nMarca de Calculadora: "+marcaCalculadora+"\nAño de Calculadora: "+añoCalculadora);
+    }
     public int Factorial(int numero) {
         int factorial = 1;
         for (int i = 1; i <= numero; i++) {
@@ -51,5 +48,4 @@ public class CalculadoraEspecial {
          double radianes = Math.toRadians(numero);
          return 1 / Math.sin(radianes);
     }
-    
 }
